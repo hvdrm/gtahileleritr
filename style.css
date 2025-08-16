@@ -1,0 +1,349 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #252525, #101010);
+  color: white;
+}
+
+/* mobilss */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  nav {
+    display: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 20;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Üst Menü */
+header {
+  
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Navigasyon Menüsüa */
+nav.menu {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+nav.menu a {
+  color: #888888;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav.menu a:hover {
+  color: #f4c724;
+  background-color: #333333;
+}
+
+/* Ana İçerik */
+main {
+  max-width: 960px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #f7f0f0;
+}
+
+main p {
+  font-size: 1rem;
+  color: #e7dfdf;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Kartlar için Grid Düzeni */
+.game-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Kart Stili */
+  .game-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari için */
+  border-radius: 30px;
+  padding: 22px;
+  transition: 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;  /* Resim ile yazı arasına boşluk */
+  font-weight: bold;
+  color: white; 
+}
+
+
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1px 35px rgb(151, 153, 155);
+}
+
+.card-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* yarı saydam siyah zemin */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap; /* yazının tek satırda kalması için */
+}
+
+.game-card img {
+  margin-bottom: 30px; /* Görsel ile yazı arasına boşluk koyar */
+  width: 150px;   /* İstersen farklı bir genişlik seçebilirsin */
+  height: 220px;  /* Oran bozulmadan istediğin yüksekliği ayarla */
+  object-fit: cover;  /* Görselin kart boyutuna uyacak şekilde kırpılmasını sağlar */
+  border-radius: 15px;
+}
+
+.game-card a {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  user-select: text;
+}
+
+
+/* Altbilgilerrrr */
+
+footer {
+ background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  text-align: center;
+  display: center;
+  color: #f9f5f5;
+  padding: 20px 20px;
+  font-size: 0.9rem; 
+  background-color: #1e1e1e;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.7);
+  user-select: none;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  nav.menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  main {
+    margin: 20px 15px 60px;
+  }
+  .game-grid {
+    gap: 15px;
+  }
+  .game-card {
+    width: 45vw;
+  }
+}
+
+/* İletişim Bölümü */
+.contact-section {
+  max-width: 500px;
+  margin: 30px auto 80px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  color: #eeeeee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #f4c724;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: #333;
+  color: #eee;
+  box-shadow: inset 0 0 5px #000;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  background-color: #444;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: #f4c724;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ddb510;
+}
+
+a {
+  text-decoration: none; 
+  color: #ffffff9b; 
+  transition: color 0.3s ease; 
+}
+
+a:hover {
+  color: #ffffff; 
+}
+
+/* Menü stil */
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(236, 232, 232, 0.714);
+  background-color: #444;
+  padding: 8px 20px;
+  margin: 0 7px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.6s ease;
+}
+
+nav a:hover {
+  background-color: rgb(151, 153, 155);
+}
