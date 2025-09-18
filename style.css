@@ -1,0 +1,380 @@
+/* ==============================
+   Temel Sıfırlama ve Fontlar
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* ==============================
+   Header ve Menü
+============================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e50914;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e50914;
+    text-shadow: 0 0 5px #e50914;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ==============================
+   Banner
+============================== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 15px #e50914;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    color: #dddddd;
+}
+
+/* arama kutusu */
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+.search input {
+    color: #1a1a1a;
+    padding: 13px 15px;
+    width: 280px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search button {
+
+    padding: 10px 20px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background-color: #ff1a2e;
+}
+
+/* ==============================
+   Oyun Kartları
+============================== */
+.games {
+    padding: 40px 50px;
+}
+
+.games h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #e50914;
+    text-shadow: 0 0 5px #000;
+}
+
+.game-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.card p {
+    margin: 0 15px 15px 15px;
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.card a {
+    display: inline-block;
+    margin: 0 15px 15px 15px;
+    padding: 8px 15px;
+    background-color: #e50914;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background-color: #ff1a2e;
+}
+
+/* ==============================
+   Popüler Hileler
+============================== */
+.popular-cheats {
+    padding: 40px 50px;
+    background-color: #111;
+    border-top: 2px solid #e50914;
+    border-bottom: 2px solid #e50914;
+}
+
+.popular-cheats h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e50914;
+}
+
+.popular-cheats ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popular-cheats ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.popular-cheats a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.popular-cheats a:hover {
+    color: #e50914;
+}
+
+/* ==============================
+   Blog Bölümü
+============================== */
+.latest-blog {
+    padding: 40px 50px;
+}
+
+.latest-blog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e50914;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.blog-list article {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+.blog-list article:hover {
+    transform: translateY(-5px);
+}
+
+.blog-list article h3 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.blog-list article h3 a:hover {
+    color: #e50914;
+}
+
+/* ==============================
+   Hakkımızda & Blog Önizleme
+============================== */
+.about-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 50px;
+}
+
+.about-blog div {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.about-blog div:hover {
+    transform: translateY(-5px);
+}
+
+.about-blog h2 {
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+    background-color: #111;
+    padding: 30px 50px;
+    text-align: center;
+    border-top: 2px solid #e50914;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links h3 {
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #e50914;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
